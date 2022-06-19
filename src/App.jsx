@@ -11,11 +11,11 @@ const App = () => {
   console.log("👋 Address:", address);
 
   // Initialize our editionDrop contract
-  const editionDrop = useEditionDrop("INSERT_EDITION_DROP_ADDRESS");
+  const editionDrop = useEditionDrop("0x94F347B5B96e515D87DC2217Eb59fA1D6Fb2E58B");
   // Initialize our token contract
-  const token = useToken("INSERT_TOKEN_ADDRESS")
+  const token = useToken("0x0b2aca0795A3875EA87fB3bBC17aa4939b1B6DDc")
   // Initialize our vote contract
-  const vote = useVote("INSERT_VOTE_ADDRESS");
+  const vote = useVote("0x501061848abc38E0008ECa6190eC198c0508A999");
 
   // State variable for us to know if user has our NFT.
   const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
@@ -180,7 +180,7 @@ const App = () => {
   if (!address) {
     return (
       <div className="landing">
-        <h1>Welcome to NarutoDAO</h1>
+        <h1>Welcome to kkDao</h1>
         <button onClick={connectWithMetamask} className="btn-hero">
           Connect your wallet
         </button>
@@ -205,7 +205,7 @@ const App = () => {
   if (hasClaimedNFT) {
     return (
       <div className="member-page">
-        <h1>🍪DAO Member Page</h1>
+        <h1>kkDao Member Page</h1>
         <p>Congratulations on being a member</p>
         <div>
           <div>
@@ -361,7 +361,7 @@ const App = () => {
   // Render mint nft screen.
   return (
     <div className="mint-nft">
-      <h1>Mint your free 🍪DAO Membership NFT</h1>
+      <h1>Mint your free kkDao Membership NFT</h1>
       <button
         disabled={isClaiming}
         onClick={mintNft}
